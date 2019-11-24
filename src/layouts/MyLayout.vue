@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Mi sitio web multi dominio
+          {{ $t('layout.appname') }}
         </q-toolbar-title>
 
         <div></div>
@@ -26,13 +26,13 @@
       content-class="bg-grey-2"
     >
       <q-list>
-        <q-item-label header>{{ $t('menu') }}</q-item-label>
+        <q-item-label header>{{ $t('layout.menu') }}</q-item-label>
         <q-item clickable tag="a" target="_blank">
           <q-item-section avatar>
             <q-icon name="home" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>{{ $t('inicio') }}</q-item-label>
+            <q-item-label>{{ $t('layout.inicio') }}</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank">
@@ -40,7 +40,7 @@
             <q-icon name="code" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>{{ $t('acerca') }}</q-item-label>
+            <q-item-label>{{ $t('layout.acerca') }}</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>

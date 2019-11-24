@@ -7,8 +7,11 @@ module.exports = function (ctx) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
+      { path: 'gethost', client: false },
+      { path: 'persist-data', client: false },
+      { path: 'persist-client', server: false },
       'i18n',
-      'axios'
+      // 'axios',
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -64,7 +67,9 @@ module.exports = function (ctx) {
       ],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Cookies'
+      ]
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
