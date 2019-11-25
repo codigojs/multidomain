@@ -2,9 +2,7 @@ import { Cookies } from 'quasar'
 import createPersistedState from 'vuex-persistedstate'
 
 export default async ({ store, ssrContext }) => {
-  const cookies = process.env.SERVER
-    ? Cookies.parseSSR(ssrContext)
-    : Cookies
+  const cookies = Cookies.parseSSR(ssrContext)
   const options = { path: '/' }
   createPersistedState({
     storage: {
